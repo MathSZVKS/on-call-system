@@ -1,0 +1,42 @@
+@import "../style/themes/green.scss";
+
+[data-theme='green'] {
+    .text-sm { font-size: small; }
+    .text-xs { font-size: x-small; }
+    .text-xxs { font-size: xx-small; }
+    .text-lg { font-size: large; }
+    .text-xl { font-size: x-large; }
+    .text-xxl { font-size: xx-large; }
+
+    .text-u-default { color: $unimed-default-green-theme; }
+    .text-u-primary { color: $unimed-primary-green-theme; }
+    .text-u-secondary { color: $unimed-secondary-green-theme; }
+    .text-u-tertiary { color: $unimed-tertiary-green-theme; }
+    .text-u-dark { color: $unimed-dark-green-theme; }
+    .text-u-light { color: $unimed-light-green-theme; }
+    .text-u-danger { color: $unimed-danger-green-theme; }
+    .text-u-black { color: $unimed-black-green-theme; }
+    .text-u-white { color: $unimed-white-green-theme; }
+
+    .bg-u-default { background-color: $unimed-default-green-theme; }
+    .bg-u-primary { background-color: $unimed-primary-green-theme; }
+    .bg-u-secondary { background-color: $unimed-secondary-green-theme; }
+    .bg-u-tertiary { background-color: $unimed-tertiary-green-theme; }
+    .bg-u-fourth { background-color: $unimed-fourth-green-theme; }
+    .bg-u-dark { background-color: $unimed-dark-green-theme; }
+    .bg-u-light { background-color: $unimed-light-green-theme; }
+    .bg-u-danger { background-color: $unimed-danger-green-theme; }
+    .bg-u-black { background-color: $unimed-black-green-theme; }
+    .bg-u-white { background-color: $unimed-white-green-theme; }
+    .bg-body-bcolor { background-color: $unimed-cold-white-green-theme; }
+    .bg-card-color { background-color: $unimed-background-green-theme; }
+
+    .text-white { color: #fff }
+    .text-black { color: #000 }
+    .bg-white { background-color: #fff }
+    .bg-black { background-color: #000 }
+
+    .border-solid-default {border: 1px solid $unimed-default-green-theme;}
+    .border-solid-primary {border: 1px solid $unimed-primary-green-theme;}
+    .border-bottom-solid {border-bottom: 1px solid $unimed-primary-green-theme;}
+}

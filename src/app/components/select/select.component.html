@@ -1,0 +1,24 @@
+<div
+  class="customSelect text-u-default"
+  [ngClass]="boxOpen ? 'customBorder' : ''">
+  <div class="searchBar">
+    <input
+      type="text"
+      placeholder=" {{ placeHolder }}"
+      [(ngModel)]="pesquisa"
+      (input)="realizarPesquisaPaciente(pesquisa)"
+      [ngClass]="boxOpen ? 'customBorder' : ''" />
+    <mat-icon *ngIf="boxOpen" (click)="openBox()" class="arrow">keyboard_arrow_up</mat-icon>
+    <mat-icon *ngIf="!boxOpen" (click)="openBox()" class="arrow">keyboard_arrow_down</mat-icon>
+  </div>
+</div>
+<div *ngIf="boxOpen && resultList.length > 0" class="results">
+  <div class="item" *ngFor="let result of resultList">
+    <div class="result" *ngIf="result != '' && boxOpen">{{ result }}</div>
+  </div>
+</div>
+<div *ngIf="boxOpen && resultList.length < 1" class="results-not-found">
+  <div class="resultsList">
+    <span>Nenhum resultado encontrado</span>
+  </div>
+</div>

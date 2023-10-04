@@ -1,0 +1,119 @@
+<div class="wrapper bg-u-primary">
+  <div class="left"></div>
+
+  <div class="middle">
+    <div class="pageButtons" (click)="displayOrHideMenu('boxEscales')">
+      <h3>Escalas</h3>
+    </div>
+    <div class="pageButtons" (click)="displayOrHideMenu('boxPeriod')">
+      <h3>Período de Escalas</h3>
+    </div>
+    <div class="pageButtons" (click)="displayOrHideMenu('boxNegotiations')">
+      <h3>Negociações</h3>
+    </div>
+    <div class="pageButtons" (click)="displayOrHideMenu('boxDuty')">
+      <h3>Plantonistas</h3>
+    </div>
+
+    <div class="buttonTheme">
+      <div class="themeSpace">
+        <button
+          style="background-color: green"
+          class="themeButton"
+          (click)="toggleTheme('green')"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="icons">
+      <div class="icon" (click)="displayOrHideMenu('messageDisplayDiv')">
+        <mat-icon svgIcon="chat" class="logo" aria-hidden="false"></mat-icon>
+      </div>
+      <div class="icon">
+        <mat-icon svgIcon="bell" class="logo" aria-hidden="false"></mat-icon>
+      </div>
+    </div>
+
+    <div class="userContainer">
+      <div class="user">
+        <div class="userImg">
+          <img src="./assets/image/top-bar/dr.png" alt="" />
+        </div>
+      </div>
+      <div class="name">
+        <span>Bom dia, Dr. Matheus</span>
+      </div>
+      <div class="arrow">
+        <mat-icon class="arrowDown">keyboard_arrow_down</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blur" *ngIf="showBlur"></div>
+
+<div id="boxEscales">
+  <div class="box">
+    <div class="line" (click)="redirectAndHideMenu('escalas', 'boxEscales')"><span> Escalas</span></div>
+    <div class="divisor"><div class="line"></div></div>
+    <div class="line" (click)="redirectAndHideMenu('escalados', 'boxEscales')"><span> Escalados</span></div>
+  </div>
+</div>
+<div id="boxPeriod">
+  <div class="box">
+    <div class="line" (click)="redirectAndHideMenu('periodoDeEscalas', 'boxPeriod')">
+      <span> Período de Escalas</span>
+    </div>
+  </div>
+</div>
+<div id="boxNegotiations">
+  <div class="box">
+    <div class="line" (click)="redirectAndHideMenu('negociacoes', 'boxNegotiations')">
+      <span> Negociações</span>
+    </div>
+  </div>
+</div>
+<div id="boxDuty">
+  <div class="box">
+    <div class="line" (click)="redirectAndHideMenu('plantonistas', 'boxDuty')"><span> Plantonistas</span></div>
+    <div class="divisor"><div class="line"></div></div>
+    <div class="line" (click)="redirectAndHideMenu('historico', 'boxDuty')"><span> Histórico</span></div>
+  </div>
+</div>
+
+<div class="messageBox" id="messageDisplayDiv">
+  <div class="bar bg-u-tertiary">
+    <span>Mensagens</span>
+    <div class="arrow bg-u-tertiary"></div>
+  </div>
+  <div class="userMessage">
+    <ng-container *ngFor="let message of receivedMessages">
+      <div class="messageReceived">
+        <div class="top">
+          <div class="photo">
+            <div
+              class="circle"
+              style="
+                background-image: url({{ message.photo }});
+              "></div>
+          </div>
+          <div class="name">
+            <span>{{ message.name }}</span>
+          </div>
+          <div class="date">
+            <span>{{ message.date }}</span>
+          </div>
+          <div class="counter">
+            <div class="circle">
+              <span>{{ message.messageCount }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="textMessage">
+          <span>{{ message.lastMessage }}</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

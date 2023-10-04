@@ -1,0 +1,103 @@
+<div class="top">
+  <div class="boxTop">
+    <div class="left"></div>
+    <div class="middle">
+      <div class="leftArrow">
+        <div class="boxLeftArrow">
+          <mat-icon class="arrowLeft">keyboard_arrow_left</mat-icon>
+        </div>
+      </div>
+      <div class="text"><span>2 DE MARÇO</span></div>
+      <div class="rightArrow">
+        <div class="boxRightArrow">
+          <mat-icon class="arrowRight">keyboard_arrow_right</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <button>Listar todos</button>
+    </div>
+  </div>
+</div>
+<div class="body">
+  <div class="fulltable">
+    <div class="head bg-u-tertiary">
+      <div class="Tablecell" style="width: 17.5%">
+        <span>Plantonista</span>
+      </div>
+      <div class="Tablecell" style="width: 13.5%">
+        <span>Início do período</span>
+      </div>
+      <div class="Tablecell" style="width: 13.5%">
+        <span>Fim do período</span>
+      </div>
+      <div class="Tablecell" style="width: 9.5%">
+        <span>Entrada</span>
+      </div>
+      <div class="Tablecell" style="width: 9.5%">
+        <span>Saída</span>
+      </div>
+      <div class="Tablecell" style="width: 9.5%">
+        <span>Saldo</span>
+      </div>
+      <div class="Tablecell" style="width: 12.5%">
+        <span>Resumo</span>
+      </div>
+      <div class="Tablecell" style="width: 14.5%">
+        <span>Status</span>
+      </div>
+    </div>
+    <div class="bodyTable">
+      <ng-container *ngFor="let historic of historics">
+        <div class="rowTable">
+          <div id="photoAndName" class="Tablecell" style="width: 17.5%">
+            <div class="photoDutyDiv">
+              <div
+                class="photoDuty"
+                style="
+                  background-image: url({{ historic.photo }});
+                "></div>
+              <div class="nameDuty">
+                <span>{{ historic.name }}</span>
+              </div>
+            </div>
+          </div>
+          <div id="startPeriod" class="Tablecell" style="width: 13.5%">
+            <span> {{ historic.startPeriod }} </span>
+          </div>
+          <div id="endPeriod" class="Tablecell" style="width: 13.5%">
+            <span> {{ historic.endPeriod }} </span>
+          </div>
+          <div id="enter" class="Tablecell" style="width: 9.5%">
+            <span> {{ historic.enter }} </span>
+          </div>
+          <div id="exit" class="Tablecell" style="width: 9.5%">
+            <span> {{ historic.exit }} </span>
+          </div>
+          <div id="founds" class="Tablecell" style="width: 9.5%">
+            <span> {{ historic.founds }} </span>
+          </div>
+          <div id="resume" class="Tablecell" style="width: 12.5%">
+            <span>{{ historic.resume }}</span>
+          </div>
+          <div id="stats" class="Tablecell" style="width: 14.5%">
+            <ng-container *ngIf="historic.stats == 'CONCLUÍDO'">
+              <span style="color: #339489; font-weight: bold">{{ historic.stats }}</span>
+            </ng-container>
+            <ng-container *ngIf="historic.stats == 'PENDENTE'">
+              <span style="color: #e85f5f; font-weight: bold">{{ historic.stats }}</span>
+            </ng-container>
+            <ng-container *ngIf="historic.stats == 'AVISO'">
+              <mat-icon style="color: #fe9319; font-size: 26px; cursor: pointer;" class="warning">warning</mat-icon>
+            </ng-container>
+            <ng-container *ngIf="historic.stats == 'CHECADO'">
+              <mat-icon style="color: #339489; font-size: 26px; cursor: pointer;" class="check_circle_outline"
+                >check_circle_outline</mat-icon
+              >
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

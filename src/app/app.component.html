@@ -1,0 +1,4 @@
+<app-login *ngIf="!logged" (userAuthenticated)="isAuthenticated($event)"></app-login>
+<!-- <app-topbar *ngIf="logged"></app-topbar> -->
+<app-topbar></app-topbar>
+<router-outlet></router-outlet>

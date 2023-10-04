@@ -1,0 +1,66 @@
+<div class="top">
+  <div class="topItens">
+    <div class="arrowSide">
+      <div class="circle">
+        <mat-icon class="arrowLeft">keyboard_arrow_left</mat-icon>
+      </div>
+    </div>
+    <div class="search">
+      <div class="forSearch">
+        <mat-icon class="search">search</mat-icon>
+        <input type="text" placeholder="Pesquisar plantonista..." />
+      </div>
+    </div>
+    <div class="date">
+      <span>Hoje, 02/05, das 06:00 às 09:00</span>
+    </div>
+    <div class="order">
+      <div class="text"><span>Ordenar por</span></div>
+      <div class="radioSelect">
+        <input type="radio" name="order" value="atendimento" />
+      </div>
+      <span style="margin-right: 3%">Atendimento</span>
+      <div class="radioSelect">
+        <input type="radio" name="order" value="nome" />
+      </div>
+      <span>Nome</span>
+    </div>
+    <div class="onDuty">
+      <span class="text">PLANTONISTAS</span>
+      <span class="available">{{ onDutyAvailable }}</span>
+      <span class="space">/</span>
+      <span>{{ onDutyTotal }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="body">
+  <div class="centralCard">
+    <ng-container *ngFor="let person of persons"
+      ><div class="cardPerson">
+        <div class="cardPersonInfo">
+          <div class="status bg-u-primary">
+            <span>{{ person.status }}</span>
+          </div>
+          <div class="lineDate">
+            <div class="photo">
+              <div class="circle" style="background-image: url('{{ person.photo }}')"></div>
+            </div>
+            <div class="date">
+              <div class="dateHour">
+                <span>{{ person.hour }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="name">
+            <span>{{ person.name }}</span>
+          </div>
+        </div>
+      </div></ng-container
+    >
+  </div>
+  <div class="footer">
+    <button class="return">Voltar</button>
+    <button class="continue">Continuar</button>
+  </div>
+</div>

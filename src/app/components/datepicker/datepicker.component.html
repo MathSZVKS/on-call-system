@@ -1,0 +1,33 @@
+<div class="app-datepicker">
+  <div class="calendar">
+    <div class="head">
+      <div class="arrow left" (click)="prevMonth()">&lt;</div>
+      <div class="month">{{ yearMonth }}</div>
+      <div class="arrow right" (click)="nextMonth()">&gt;</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let day of weekDays">{{ day }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let week of weeks">
+          <tr>
+            <td
+              *ngFor="let day of week"
+              [class.current-day]="isCurrentDay(day.day)"
+              [class.current-month]="isCurrentMonth(day.day)"
+              [class.other-month]="!day.currentMonth"
+              [class.isSelected]="isSelected(day)"
+              (click)="selectDate(day)">
+              {{ day.day }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+

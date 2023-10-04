@@ -1,0 +1,138 @@
+<div class="bodyAll">
+  <div class="top">
+    <div class="arrowSide">
+      <div class="circle">
+        <mat-icon class="arrowLeft">keyboard_arrow_left</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="centerContent">
+      <div class="line">
+        <div class="selectLine">
+          <custom-select [optionsList]="list" placeHolder="Selecionar unidade"></custom-select>
+        </div>
+      </div>
+      <div class="line">
+        <div class="selectLine">
+          <custom-select [optionsList]="list" placeHolder="Selecionar setor"></custom-select>
+        </div>
+      </div>
+      <div class="line" style="height: 12%">
+        <div class="topLine"><span>Período</span></div>
+        <div class="bodyLine">
+          <div class="periodSpace">
+            <div class="radioPeriod">
+              <input type="radio" name="period" value="morning" checked />
+            </div>
+            <div class="textPeriod">
+              <span>Manhã</span>
+            </div>
+          </div>
+          <div class="periodSpace">
+            <div class="radioPeriod">
+              <input type="radio" name="period" value="afternon" checked />
+            </div>
+            <div class="textPeriod">
+              <span>Tarde</span>
+            </div>
+          </div>
+          <div class="periodSpace">
+            <div class="radioPeriod">
+              <input type="radio" name="period" value="night" checked />
+            </div>
+            <div class="textPeriod">
+              <span>Noite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line" style="height: 14%">
+        <div class="topLine">
+          <div class="leftRight"><span>Data de início</span></div>
+          <div class="leftRight" style="margin-left: 5%"><span>Hora de início</span></div>
+        </div>
+        <div class="bodyLine">
+          <div class="leftBody">
+            <div class="icon">
+              <mat-icon class="calendar_today">calendar_today</mat-icon>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="DD/MM/YYYY" />
+            </div>
+          </div>
+          <div class="rightBody">
+            <div class="icon">
+              <mat-icon class="query_builder">query_builder</mat-icon>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="00:00" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line" style="height: 14%">
+        <div class="topLine">
+          <div class="leftRight"><span>Data de fim</span></div>
+          <div class="leftRight" style="margin-left: 5%"><span>Hora de fim</span></div>
+        </div>
+        <div class="bodyLine">
+          <div class="leftBody">
+            <div class="icon">
+              <mat-icon class="calendar_today">calendar_today</mat-icon>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="DD/MM/YYYY" />
+            </div>
+          </div>
+          <div class="rightBody">
+            <div class="icon">
+              <mat-icon class="query_builder">query_builder</mat-icon>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="00:00" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line" style="height: 14%">
+        <div class="topLine">
+          <div class="leftRight"><span>Plantonistas quant.</span></div>
+          <div class="leftRight" style="margin-left: 5%"><span>Aprovar troca</span></div>
+        </div>
+        <div class="bodyLine">
+          <div class="leftBody">
+            <div class="input" style="padding: 5%">
+              <input type="text" />
+            </div>
+          </div>
+          <div class="rightBody" style="border: none; background-color: transparent">
+            <div class="change">
+              <div class="radio">
+                <input type="radio" name="yesOrNo" value="yes" checked />
+              </div>
+              <div class="text"><span>Sim</span></div>
+            </div>
+            <div class="change">
+              <div class="radio">
+                <input type="radio" name="yesOrNo" value="no" checked />
+              </div>
+              <div class="text"><span>Não</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line">
+        <div class="divButton">
+          <div class="button" style="width: 25%">
+            <button id="cancel">Cancelar</button>
+          </div>
+          <div class="button" style="width: 25%"><button id="confirm">Confirmar</button></div>
+          <div class="button" style="width: 55%">
+            <button id="confirmAndScale">Confirmar e Escalar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

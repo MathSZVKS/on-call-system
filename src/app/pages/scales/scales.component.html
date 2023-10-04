@@ -1,0 +1,376 @@
+<div class="body">
+  <div class="topTable">
+    <div class="period">
+      <span>PERÍODO</span>
+    </div>
+    <div class="topAndDates">
+      <div class="dateLineTop">
+        <div class="month">
+          <span>{{ month }}</span>
+        </div>
+        <div class="clinic">
+          <div class="clinicButton">
+            <span>{{ clinic }}</span>
+          </div>
+        </div>
+        <div class="keys">
+          <div class="arrow">
+            <mat-icon class="arrowLeft">keyboard_arrow_left</mat-icon>
+          </div>
+          <div class="today">
+            <span>Hoje</span>
+          </div>
+          <div class="arrow">
+            <mat-icon class="arrowRight">keyboard_arrow_right</mat-icon>
+          </div>
+        </div>
+      </div>
+      <div class="dateLineBottom">
+        <ng-container *ngFor="let day of weekDaysWithNumber">
+          <div class="day">
+            <span>{{ day }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let period of periods; index as i">
+    <div class="lineTable">
+      <div class="dateFirst">
+        <div class="head">
+          <span>{{ period }}</span>
+        </div>
+        <div class="body">
+          <span>{{ hoursPeriod[period][0] }}</span>
+        </div>
+      </div>
+      <ng-container *ngFor="let day of weekDays">
+        <div class="column">
+          <div class="overlay" (click)="redirect('periodoDeEscalas')">
+            <div class="more">+</div>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '06:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '12:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '18:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '07:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '13:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '19:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '08:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '14:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '20:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '09:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '15:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '21:00' &&
+                      scale.periodo == hoursPeriod[period][0] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="lineTable">
+      <div class="dateSecond">
+        <div class="body">
+          <span>{{ hoursPeriod[period][1] }}</span>
+        </div>
+      </div>
+      <ng-container *ngFor="let day of weekDays">
+        <div class="column">
+          <div class="overlay" (click)="redirect('periodoDeEscalas')">
+            <div class="more">+</div>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '09:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '15:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '21:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '10:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '16:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '22:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '11:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '17:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '23:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="hour">
+            <ng-container *ngFor="let scale of scales">
+              <ng-container *ngIf="scale.dia == day">
+                <ng-container *ngFor="let horario of scale.horario">
+                  <ng-container
+                    *ngIf="
+                      horario == '12:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'MANHÃ'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '18:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'TARDE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      horario == '00:00' &&
+                      scale.periodo == hoursPeriod[period][1] &&
+                      period == 'NOITE'
+                    ">
+                    <div class="divHour">
+                      <span>{{ scale.paciente }}</span>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,6 @@
+# ignore artifacts
+build
+coverage
+e2e
+package.json
+package-lock.json

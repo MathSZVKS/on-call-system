@@ -1,0 +1,84 @@
+.app-datepicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+
+
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 1vw;
+
+  .head{
+      display: flex;
+      color: #0c8073;
+      width: 100%;
+      justify-content: center;
+          align-items: center;
+      .arrow {
+          cursor: pointer;
+          font-size: 2.6vh;
+          color: #4da198;
+          margin: 0 10px;
+        }
+        .month {
+          font-size: 2.2vh;
+          font-weight: bold;
+          margin-block: 10px;
+          display: flex;
+          width: 80%;
+          justify-content: center;
+          align-items: center;
+          color:#4ba59b;
+
+        }
+  }
+
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      th {
+        padding: 8px;
+        text-align: center;
+        color: #4ba59b;
+        font-size: 1.7vh;
+
+      }
+
+      td {
+        padding: 8px;
+        text-align: center;
+        cursor: pointer;
+
+        &.current-day {
+          font-weight: bold;
+        }
+
+        &.current-month {
+          color: #9ab0b0;
+          font-weight: 500;
+        }
+
+        &.other-month {
+          color: #d8dada;
+        }
+        &.isSelected{
+          color: white;
+          background: #0c8073;
+        }
+        &.current-month:hover{
+          color: white;
+          background: #0c8073;
+        }
+      }
+    }
+  }
+}

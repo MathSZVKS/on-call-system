@@ -1,0 +1,302 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.body {
+  cursor: default;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3vh;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in forwards;
+
+  .topTable {
+    height: 8vh;
+    width: 77%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2px;
+
+    .period {
+      width: 13.8%;
+      height: 8vh;
+      margin-right: 0.2%;
+      border: 1px solid #c1c1c1;
+      border-radius: 6px;
+      display: flex;
+      text-align: center;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      background-color: #07796B;
+    }
+
+    .topAndDates {
+      display: flex;
+      flex-direction: column;
+      width: 86%;
+      height: 8vh;
+
+      .dateLineTop {
+        width: 100%;
+        height: 4vh;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 0.3%;
+        background-color: #006A5B;
+
+        .month {
+          width: 28.7%;
+          height: 4vh;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          color: #80beb5;
+          border-right: 2px solid #80beb5;
+        }
+
+        .clinic {
+          width: 57.72%;
+          height: 3vh;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+
+          .clinicButton {
+            transition: 200ms linear;
+            width: 40%;
+            height: 3vh;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            color: white;
+
+            &:hover {
+              background-color: #339489;
+              border-radius: 6px;
+              transition: 200ms linear;
+            }
+          }
+        }
+
+        .keys {
+          width: 13.72%;
+          height: 4vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          .arrow {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            width: 33%;
+            height: 3vh;
+            color: white;
+            transition: 200ms linear;
+
+            &:hover {
+              background-color: #339489;
+              border-radius: 6px;
+              transition: 200ms linear;
+            }
+          }
+
+          .today {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            width: 33%;
+            height: 3vh;
+            color: white;
+            transition: 200ms linear;
+
+            &:hover {
+              background-color: #339489;
+              border-radius: 6px;
+              transition: 200ms linear;
+            }
+          }
+        }
+      }
+
+      .dateLineBottom {
+        width: 100%;
+        height: 4vh;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: #07796B;
+
+        .day {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 14.28%;
+          height: 4vh;
+          color: #80beb5;
+          transition: 200ms linear;
+          border-right: 2px solid #80b5ad;
+
+          &:hover {
+            color: white;
+            transition: 200ms linear;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .lineTable {
+    height: 13vh;
+    width: 77%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2px;
+
+    .dateFirst {
+      width: 14%;
+      height: 13.3vh;
+      margin-right: 0.2%;
+      margin-top: 0.1%;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom: 2px solid #399789;
+      background-color: #07796B;
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #aed3ce;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-color: #399789;
+        height: 20%;
+        width: 100%;
+      }
+
+      .body {
+        height: 60%;
+        color: white;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    .dateSecond {
+      width: 14%;
+      height: 13vh;
+      margin-right: 0.2%;
+      margin-bottom: 0.1%;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: #07796B;
+      .body {
+        height: 80%;
+        color: white;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    .column {
+      width: 12.3%;
+      height: 13vh;
+      border: 1px solid #c1c1c1;
+      border-radius: 4px;
+      margin-right: 2px;
+      display: flex;
+      flex-direction: column;
+      padding: 0.2%;
+      transition: 200ms linear;
+      position: relative;
+      background-color: #ffffff;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 200ms linear;
+
+        .more{
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          display: none;
+          color: #777777;
+          font-size: 2vh;
+        }
+
+        &:hover {
+          position: absolute;
+          transition: 200ms linear;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #d1e2df;
+          z-index: 2;
+          cursor: pointer;
+
+          .more{
+            display: flex;
+          }
+        }
+      }
+
+      .hour {
+        width: 100%;
+        height: 25%;
+
+        .divHour {
+          width: 100%;
+          height: 100%;
+          background-color: #dddddd;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          text-align: center;
+          padding-left: 3%;
+
+          span {
+            color: #949494;
+            font-size: 1.2vh;
+          }
+        }
+      }
+    }
+  }
+}
